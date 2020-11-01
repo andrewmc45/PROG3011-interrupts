@@ -1,0 +1,3 @@
+C:/msys64/home/Andrew/hello_arm/cmake-build-debug-arm/CMakeFiles/rebuild_cache.dir
+C:/msys64/home/Andrew/hello_arm/cmake-build-debug-arm/CMakeFiles/hello_arm.elf.dir
+C:/msys64/home/Andrew/hello_arm/cmake-build-debug-arm/CMakeFiles/edit_cache.dir
