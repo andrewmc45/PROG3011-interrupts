@@ -5,6 +5,8 @@
 	.thumb 
 	.fpu softvfp
 
+	.global _vectors, _start
+
 	.section .vectors
 	.align 2
 
