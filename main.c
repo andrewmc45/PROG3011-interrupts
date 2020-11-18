@@ -5,6 +5,9 @@
 #define GPIOA_MODER (unsigned long *)0x50000000
 #define GPIOA_ODR   (unsigned long *)0x50000014
 
+#define GPIOC_MODER (unsigned long *)0x50000800
+#define GPIOC_IDR   (unsigned long *)0x50000810
+
 uint8_t num = 0x55;
 uint8_t num2;
 
@@ -24,21 +27,22 @@ void main()
     *GPIOA_MODER &= ~0x00000C00UL;
     *GPIOA_MODER |= 0x00000400UL;
 
+    /* configure PC13 as an input pin */
+    *GPIOC_MODER &= ~0x0C000000UL;
 
 	while(1)
 	{
-/* turn LED ON (PA5) */
-		*GPIOA_ODR |= 0x20UL;
+	    /* check if user button to be pressed */
+	    if((*GPIOC_IDR & 0x2000UL) == 0) {
+            /* turn LED ON (PA5) */
+            *GPIOA_ODR |= 0x20UL;
+        } else {
+            /* turn LED OFF (PA5) */
+            *GPIOA_ODR &= ~0x20UL;
+        }
 
-        /* delay */
-        for(int i=0; i<100000; i++);
-
-        /* turn LED OFF (PA5) */
-        *GPIOA_ODR &= ~0x20UL;
-
-        /* delay */
-        for(int i=0; i<100000; i++);
-
+//#ifndef NDEBUG
         print_ch('X');
+//#endif
 	}	
 }	
