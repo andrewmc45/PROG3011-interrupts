@@ -1,4 +1,4 @@
-set(CMAKE_ASM_COMPILER "C:/Program Files (x86)/GNU Arm Embedded Toolchain/bin/arm-none-eabi-as.exe")
+set(CMAKE_ASM_COMPILER "C:/Program Files (x86)/GNU Arm Embedded Toolchain/bin/arm-none-eabi-gcc.exe")
 set(CMAKE_ASM_COMPILER_ARG1 "")
 set(CMAKE_AR "C:/Program Files (x86)/GNU Arm Embedded Toolchain/bin/arm-none-eabi-ar.exe")
 set(CMAKE_ASM_COMPILER_AR "C:/Program Files (x86)/GNU Arm Embedded Toolchain/bin/arm-none-eabi-gcc-ar.exe")

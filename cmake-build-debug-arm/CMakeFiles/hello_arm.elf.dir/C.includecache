@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-C:/msys64/home/Andrew/hello_arm/main.c
+C:/msys64/home/Andrew/semihosting/main.c
 stdint.h
 -
 

@@ -1,4 +1,4 @@
-"C:\Program Files\JetBrains\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=C:/msys64/usr/bin/make.exe "-DCMAKE_C_COMPILER=C:/Program Files (x86)/GNU Arm Embedded Toolchain/bin/arm-none-eabi-gcc.exe" "-DCMAKE_CXX_COMPILER=C:/Program Files (x86)/GNU Arm Embedded Toolchain/bin/arm-none-eabi-g++.exe" -G "MSYS Makefiles" C:\msys64\home\Andrew\hello_arm
+"C:\Program Files\JetBrains\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=C:/msys64/usr/bin/make.exe "-DCMAKE_C_COMPILER=C:/Program Files (x86)/GNU Arm Embedded Toolchain/bin/arm-none-eabi-gcc.exe" "-DCMAKE_CXX_COMPILER=C:/Program Files (x86)/GNU Arm Embedded Toolchain/bin/arm-none-eabi-g++.exe" -G "MSYS Makefiles" C:\msys64\home\Andrew\semihosting
 -- Configuring done
 -- Generating done
--- Build files have been written to: C:/msys64/home/Andrew/hello_arm/cmake-build-debug-arm
+-- Build files have been written to: C:/msys64/home/Andrew/semihosting/cmake-build-debug-arm

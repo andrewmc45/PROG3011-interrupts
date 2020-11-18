@@ -1,13 +1,19 @@
 #include <stdint.h>
 
-#define RCC_IOPENR (unsigned long *)0x40021034
+#define RCC_IOPENR  (unsigned long *)0x40021034
 
 #define GPIOA_MODER (unsigned long *)0x50000000
-#define GPIOA_ODR (unsigned long *)0x50000014
-#define GPIOC_MODER (unsigned long *)
-#define GPIOC_ODR (unsigned long *)
+#define GPIOA_ODR   (unsigned long *)0x50000014
+
 uint8_t num = 0x55;
 uint8_t num2;
+
+extern void _print_ch(char *ptr);  // somewhere there is a function called _print_ch that has a single parameter that is a pointer to a character
+
+void print_ch(char ch)
+{
+    _print_ch(&ch);// passing in the address of where the character is located
+}
 
 void main()
 {
@@ -18,9 +24,6 @@ void main()
     *GPIOA_MODER &= ~0x00000C00UL;
     *GPIOA_MODER |= 0x00000400UL;
 
-    /* configure PC5 as output pin */
-    *GPIOC_MODER &= ~0x00000C00UL;
-    *GPIOC_MODER |= 0x00000400UL;
 
 	while(1)
 	{
@@ -35,5 +38,7 @@ void main()
 
         /* delay */
         for(int i=0; i<100000; i++);
+
+        print_ch('X');
 	}	
 }	

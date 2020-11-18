@@ -10,7 +10,7 @@ unset(CMAKE_CXX_COMPILER)
 #set(CMAKE_C_COMPILER arm-none-eabi-gcc.exe)
 #set(CMAKE_ASM_COMPILER arm-none-eabi-as.exe)
 
-project(hello_arm C ASM)
+project(semihosting C ASM)
 
 set(CMAKE_C_STANDARD 11)
 
@@ -26,7 +26,7 @@ set(CMAKE_C_FLAGS_RELEASE - "-O0")
 add_link_options(-T${CMAKE_SOURCE_DIR}/stm32.ld)
 add_link_options(--specs=nosys.specs)
 
-add_executable(hello_arm.elf
+add_executable(semihosting.elf
         main.c
         startup.s
         stm32.ld)

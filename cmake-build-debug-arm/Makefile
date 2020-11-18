@@ -68,24 +68,13 @@ RM = "/C/Program Files/JetBrains/CLion 2020.2.3/bin/cmake/win/bin/cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /C/msys64/home/Andrew/hello_arm
+CMAKE_SOURCE_DIR = /C/msys64/home/Andrew/semihosting
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /C/msys64/home/Andrew/hello_arm/cmake-build-debug-arm
+CMAKE_BINARY_DIR = /C/msys64/home/Andrew/semihosting/cmake-build-debug-arm
 
 #=============================================================================
 # Targets provided globally by CMake.
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"/C/Program Files/JetBrains/CLion 2020.2.3/bin/cmake/win/bin/cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -98,11 +87,22 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	"/C/Program Files/JetBrains/CLion 2020.2.3/bin/cmake/win/bin/cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /C/msys64/home/Andrew/hello_arm/cmake-build-debug-arm/CMakeFiles /C/msys64/home/Andrew/hello_arm/cmake-build-debug-arm/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /C/msys64/home/Andrew/semihosting/cmake-build-debug-arm/CMakeFiles /C/msys64/home/Andrew/semihosting/cmake-build-debug-arm/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /C/msys64/home/Andrew/hello_arm/cmake-build-debug-arm/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /C/msys64/home/Andrew/semihosting/cmake-build-debug-arm/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -131,17 +131,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named hello_arm.elf
+# Target rules for targets named semihosting.elf
 
 # Build rule for target.
-hello_arm.elf: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hello_arm.elf
-.PHONY : hello_arm.elf
+semihosting.elf: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 semihosting.elf
+.PHONY : semihosting.elf
 
 # fast build rule for target.
-hello_arm.elf/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_arm.elf.dir/build.make CMakeFiles/hello_arm.elf.dir/build
-.PHONY : hello_arm.elf/fast
+semihosting.elf/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/semihosting.elf.dir/build.make CMakeFiles/semihosting.elf.dir/build
+.PHONY : semihosting.elf/fast
 
 main.obj: main.c.obj
 
@@ -149,7 +149,7 @@ main.obj: main.c.obj
 
 # target to build an object file
 main.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_arm.elf.dir/build.make CMakeFiles/hello_arm.elf.dir/main.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/semihosting.elf.dir/build.make CMakeFiles/semihosting.elf.dir/main.c.obj
 .PHONY : main.c.obj
 
 main.i: main.c.i
@@ -158,7 +158,7 @@ main.i: main.c.i
 
 # target to preprocess a source file
 main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_arm.elf.dir/build.make CMakeFiles/hello_arm.elf.dir/main.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/semihosting.elf.dir/build.make CMakeFiles/semihosting.elf.dir/main.c.i
 .PHONY : main.c.i
 
 main.s: main.c.s
@@ -167,7 +167,7 @@ main.s: main.c.s
 
 # target to generate assembly for a file
 main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_arm.elf.dir/build.make CMakeFiles/hello_arm.elf.dir/main.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/semihosting.elf.dir/build.make CMakeFiles/semihosting.elf.dir/main.c.s
 .PHONY : main.c.s
 
 startup.obj: startup.s.obj
@@ -176,7 +176,7 @@ startup.obj: startup.s.obj
 
 # target to build an object file
 startup.s.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_arm.elf.dir/build.make CMakeFiles/hello_arm.elf.dir/startup.s.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/semihosting.elf.dir/build.make CMakeFiles/semihosting.elf.dir/startup.s.obj
 .PHONY : startup.s.obj
 
 # Help Target
@@ -187,7 +187,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... hello_arm.elf"
+	@echo "... semihosting.elf"
 	@echo "... main.obj"
 	@echo "... main.i"
 	@echo "... main.s"

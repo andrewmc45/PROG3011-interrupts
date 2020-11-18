@@ -5,7 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_ASM
-  "C:/msys64/home/Andrew/hello_arm/startup.s" "C:/msys64/home/Andrew/hello_arm/cmake-build-debug-arm/CMakeFiles/hello_arm.elf.dir/startup.s.obj"
+  "C:/msys64/home/Andrew/semihosting/startup.s" "C:/msys64/home/Andrew/semihosting/cmake-build-debug-arm/CMakeFiles/hello_arm.elf.dir/startup.s.obj"
   )
 set(CMAKE_ASM_COMPILER_ID "GNU")
 
@@ -13,7 +13,7 @@ set(CMAKE_ASM_COMPILER_ID "GNU")
 set(CMAKE_ASM_TARGET_INCLUDE_PATH
   )
 set(CMAKE_DEPENDS_CHECK_C
-  "C:/msys64/home/Andrew/hello_arm/main.c" "C:/msys64/home/Andrew/hello_arm/cmake-build-debug-arm/CMakeFiles/hello_arm.elf.dir/main.c.obj"
+  "C:/msys64/home/Andrew/semihosting/main.c" "C:/msys64/home/Andrew/semihosting/cmake-build-debug-arm/CMakeFiles/hello_arm.elf.dir/main.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
