@@ -69,6 +69,9 @@ _vectors:
 
 	.type _start, %function
 _start:
+    ldr r0, =_stack_top
+    mov sp, r0
+
 	b main
 
     .type _print_ch, %function
