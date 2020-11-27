@@ -45,7 +45,7 @@ void main()
     *RCC_CFGR = rcc_cfgr;
 
     /* configure SYSCLK for 64MHz */
-#if 0
+
 
     /* disable PLL */
     *RCC_CR &= ~0x01000000UL;
@@ -69,7 +69,7 @@ void main()
 
     /* turn on PLLR output */
     *RCC_PLLCFGR |= 0x10000000UL;
-#endif
+
 //    *RCC_PLLCFGR |= 0x10000000UL;
 
     /* add wait states to FLASH */
