@@ -1,3 +1,3 @@
-# Embedded-C-hello-arm
+# PROG3011-interrupts
 
-## A Hello World Program for ARM
+## A basic program using interrupts
